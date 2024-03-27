@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 const Job = ({ job }) => {
   // eslint-disable-next-line react/prop-types
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -30,7 +31,7 @@ const Job = ({ job }) => {
             </button>
           </div>
           <div className="card-actions">
-          <Link to='/job'>  <button className="btn btn-info">View Details</button></Link>
+          <Link to={`/job/${id}`}>  <button className="btn btn-info">View Details</button></Link>
           </div>
         </div>
       </div>
